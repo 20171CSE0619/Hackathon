@@ -1,0 +1,17 @@
+﻿body {
+    background-color: #45ccb8;
+}
+.jumbotron{
+    height:500px;
+    width:750px;
+    margin-left:160px;
+    margin-right:50px;
+    margin-top:80px;
+}
+.btn{
+    background-color:skyblue;
+}
+.vl {
+    border-left: 2px solid black;
+    height: 300px;
+}
