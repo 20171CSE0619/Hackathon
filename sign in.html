@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Sign In</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/cdfdbdead7.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="stylesheet.css" />
+<script>
+function validateform()
+{
+var email=document.getElementById("Email").value;
+var pwd=document.getElementById("PWD").value;
+if(email=="")
+{
+alert("please enter your email");
+Email.focus();
+return false;
+}
+if(pwd=="")
+    {
+        alert("password field is empty");
+        PWD.focus()
+        return false;
+	}
+   if (!regularExpression.test(pwd))
+   {
+       alert("enter pwd with minimum one number,special symbol and 8 or more characters");
+       PWD.focus();
+       return false;
+	}
+alert("success");
+document.write("success");
+return true;
+}
+</script>
+</head>
+<body>
+    <div class="jumbotron">
+        <h1>Sign In</h1>
+        <br />
+        <div class="row">
+
+            <div class="col-md-4 col-sm-12 col-12">
+<form name="UserReg" action="admin grid.html" onsubmit="return validateform()" method="post">
+                Email:<br>
+                <input type="text" size="20" id="Email">
+                <p>e.g.yourname@gmail.com</p>
+                <input type="radio" value="I'm a new user" name="I'm a new user" />
+                <label for="Im a new user"><b>I'm a new user</b></label><br>
+                <input type="radio" value="I'm a new user" name="I'm an existing user" />
+                <label for="Im an existing user"><b>I'm an existing user</b></label><br>
+                Password:<br />
+                <input type="password" size="20" id="PWD">
+                <br />
+                <input type="checkbox" value="Remember Me" />
+                <label for="checkbox">Remember Me</label>
+                <p><a href="#">Forgot Password</a></p>
+               <input type="submit" value="sign in" name="UserSigUp" action="admin grid.html" />
+    </form>
+            </div>
+
+            <div class="vl">
+
+            </div>
+            <div class="col-12 col-md-4 col-sm-12">
+                <br />
+                <br />
+                <p>Click below to sign in using your social account</p>
+                <br />
+
+                <button type="button" value="sign in with facebook"><i class="fab fa-facebook-square"></i>    <a href="www.facebook.com"> Sign in with Facebook</a></button>
+                <br />
+                <br />
+             
+                <button type="button" value="sign in with google"><i class="fab fa-google-plus-square"></i>   <a href="www.gmail.com"> Sign  in  with  Google </a></button>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
